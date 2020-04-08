@@ -2,7 +2,7 @@ require_relative '../classes/answers.rb'
 
 require 'open-uri'
 
-module FeedBack
+module FeedBackbot
   module Commands
     class Feelings < SlackRubyBot::Commands::Base
       command 'feel_great' do |client, data, _match|

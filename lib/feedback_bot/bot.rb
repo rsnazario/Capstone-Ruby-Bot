@@ -1,4 +1,4 @@
-module FeedBack
+module FeedBackbot
   class Bot < SlackRubyBot::Bot
     help do
       title 'FeedBack Slack Bot'
