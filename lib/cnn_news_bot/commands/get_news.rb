@@ -54,18 +54,6 @@ module CnnNews
         client.say(channel: data.channel, text: rss.items.second.link)
         client.say(channel: data.channel, text: rss.items.third.link)
       end
-      
-      
-      command 'say_hello' do |client, data, _match|
-        client.say(channel: data.channel, text: HelloText.say_hello)
-      end
     end
-  end
-end
-
-
-class HelloText
-  def self.say_hello
-    'Hello! This is a Bot!'
   end
 end
