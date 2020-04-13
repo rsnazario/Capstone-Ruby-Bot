@@ -34,23 +34,33 @@ Add the gems as the following screenshot:
 Now, to Link your file to the API with Slack, go to [slack.com/services/new/bot](slack.com/services/new/bot) in your workspace and create a bot application to get a <strong>SLACK_API_TOKEN</strong>.
 
 Choose from the two options to connect your machine to Slack:
-
- 1 - .env file
-   - Add <code>SLACK_API_TOKEN = @your_token_here </code>
-   - Add <code>gem 'dotenv' to your Gemfile 
-   - Code the config.ru file as in this repo
+  Option 1
+  - .env file
+  - Add <code>SLACK_API_TOKEN = @your_token_here </code>
+  - Add <code>gem 'dotenv' to your Gemfile 
+  - Code the config.ru file as in this repo
   
- 2 - export
-   - Type <code>$export SLACK_API_TOKEN=@your_token_here</code> on your terminal
-   - Add <code>token=ENV['SLACK_API_TOKEN']</code> as in the video of the last link (check after 13')
+  Option 2
+  - export
+  - Type <code>$export SLACK_API_TOKEN=@your_token_here</code> on your terminal
+  - Add <code>token=ENV['SLACK_API_TOKEN']</code> as in the video of the last link (check after 13')
 
 If you choose to apply option 1, add the same Gems on the Gemfile of this Repo
+  - celluloid-io
+  - dotenv
+  - puma
+  - rack
+  - slack-ruby-bot
+  
+The files <code>main.rb</code> and <code>bot.rb</code> just require the communication with other files and/or describe the functionality of the <strong>help</strong> command, respectively. 
+The important file to understand of your first Bot implementation, is the <strong>command</strong> file <code>get_news.rb</code>. The main concept in this file is that you can open an url after requiring <code> require 'open-uri'</code> and then you can <strong>Parse</strong> the information within the variable to finally access it as items format.
 
-<code>  gem 'slack-ruby-bot'</code><br/>
-<code>  gem 'dotenv'</code><br/>
-<code>  gem 'puma'</code><br/>
-<code>  gem 'celluloid-io'</code><br/>
-<code>  gem 'rack'</code><br/>
+Finally, just run on your terminal the <code>bundle exec rackup</code> to connect your first Slack Ruby bot to the workspace previosly. 
+
+### Video Presentation
+
+The link for the video presentation in Loom platform is [here](https://www.loom.com/share/f4e5f35127cd4adcb2c8661ec4e12e43)
+
 
 ## Author
 
