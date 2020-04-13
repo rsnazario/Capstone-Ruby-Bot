@@ -32,6 +32,13 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/HashEachMethods:
+  Enable: false
+Style/HashTransformKeys:
+  Enable: false
+Style/HashTransformValues:
+  Enable: false
+
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -40,3 +47,8 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
+Lint/RaiseException:
+  Enable: false
+Lint/StructNewOverride:
+  Enable: false
