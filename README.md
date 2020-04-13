@@ -45,16 +45,12 @@ Choose from the two options to connect your machine to Slack:
    - Add <code>token=ENV['SLACK_API_TOKEN']</code> as in the video of the last link (check after 13')
 
 If you choose to apply option 1, add the same Gems on the Gemfile of this Repo
-<code>
-  gem 'slack-ruby-bot'
-  gem 'dotenv'
-  gem 'puma'
-  gem 'celluloid-io'
-  gem 'rack'
-</code>
 
-
-
+<code>  gem 'slack-ruby-bot'</code><br/>
+<code>  gem 'dotenv'</code><br/>
+<code>  gem 'puma'</code><br/>
+<code>  gem 'celluloid-io'</code><br/>
+<code>  gem 'rack'</code><br/>
 
 ## Author
 
@@ -63,11 +59,6 @@ If you choose to apply option 1, add the same Gems on the Gemfile of this Repo
 - Github: [@rsnazario](https://github.com/rsnazario)
 - Twitter: [@rsnazario](https://twitter.com/rsnazario)
 - Linkedin: [Rafael Nazario](https://www.linkedin.com/in/rafael-nazario-692b8293/) 
-
-## Content Related
-
-     https://rollout.io/blog/the-enumerable-module/
-     
 
 ## 🤝 Contributing
 
@@ -82,7 +73,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse!
-- The Odin Project
 - Programming Partner: [Elbie Moonga](https://github.com/Elbie-em)
-- Microverse Friend:   [Julio Añoveros Barrera](https://github.com/jubaan)
+- Microverse Friends:  [Julio Añoveros Barrera](https://github.com/jubaan) | [Eduardo Cruz](https://github.com/EdCrux)
 - Microverse Mentor:   [Carlos Augusto Medeiros Filho](https://github.com/camfilho)
