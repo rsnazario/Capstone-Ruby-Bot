@@ -5,7 +5,7 @@ module CnnNews
       desc 'This bot gets you some news'
 
       command :world do
-        title 'world_news'
+        title 'world'
         desc 'Returns 3 links with related-topic news'
         long_desc 'Returns the links for the last 3 news about World'
       end
@@ -15,7 +15,7 @@ module CnnNews
         desc 'Returns 3 links with related-topic news'
         long_desc 'Returns the links for the last 3 news about Americas'
       end
-      
+
       command :science do
         title 'science'
         desc 'Returns 3 links with related-topic news'

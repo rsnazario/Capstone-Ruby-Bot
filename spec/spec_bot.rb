@@ -3,7 +3,7 @@ require './lib/cnn_news_bot/bot'
 
 describe CnnNews::Bot do
   let(:object) { CnnNews::Bot.instance }
-  
+
   context 'slack_token not configured' do
     before do
       @slack_api_token = ENV.delete('SLACK_API_TOKEN')
