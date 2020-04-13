@@ -19,19 +19,19 @@ module CnnNews
       command :science do
         title 'science'
         desc 'Returns 3 links with related-topic news'
-        long_desc 'Returns the links for the last 3 news about World'
+        long_desc 'Returns the links for the last 3 news about Science and Space'
       end
 
       command :tech do
-        title 'science'
+        title 'tech'
         desc 'Returns 3 links with related-topic news'
-        long_desc 'Returns the links for the last 3 news about World'
+        long_desc 'Returns the links for the last 3 news about Technology'
       end
 
       command :sports do
-        title 'science'
+        title 'sports'
         desc 'Returns 3 links with related-topic news'
-        long_desc 'Returns the links for the last 3 news about World'
+        long_desc 'Returns the links for the last 3 news about World Sports'
       end
     end
   end
