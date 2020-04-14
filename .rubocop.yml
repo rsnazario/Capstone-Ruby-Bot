@@ -33,11 +33,11 @@ Style/DefWithParentheses:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 Style/HashEachMethods:
-  Enable: false
+  Enabled: false
 Style/HashTransformKeys:
-  Enable: false
+  Enabled: false
 Style/HashTransformValues:
-  Enable: false
+  Enabled: false
 
 
 Layout/HashAlignment:

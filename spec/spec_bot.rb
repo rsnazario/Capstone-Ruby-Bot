@@ -1,5 +1,5 @@
 require 'slack-ruby-bot/rspec'
-require './lib/cnn_news_bot/bot'
+require_relative '../lib/cnn_news_bot/bot'
 
 describe CnnNews::Bot do
   let(:object) { CnnNews::Bot.instance }
