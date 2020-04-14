@@ -9,54 +9,61 @@ module CnnNews
       command 'world' do |client, data, _match|
         url = 'http://rss.cnn.com/rss/edition_world.rss'
 
-        rss = RSS::Parser.parse(open(url).read, false)
-        client.say(channel: data.channel, text: rss.items.first.title)
-        client.say(channel: data.channel, text: rss.items.first.link)
-        client.say(channel: data.channel, text: rss.items.first.title)
-        client.say(channel: data.channel, text: rss.items.second.link)
-        client.say(channel: data.channel, text: rss.items.first.title)
-        client.say(channel: data.channel, text: rss.items.third.link)
+        world_obj = SlackInteraction.new(url)
+        world_obj.interact(client, data.channel)
       end
 
       command 'americas' do |client, data, _match|
         url = 'http://rss.cnn.com/rss/edition_americas.rss'
 
-        rss = RSS::Parser.parse(open(url).read, false)
-        client.say(channel: data.channel, text: rss.items.first.title)
-        client.say(channel: data.channel, text: rss.items.first.link)
-        client.say(channel: data.channel, text: rss.items.first.title)
-        client.say(channel: data.channel, text: rss.items.second.link)
-        client.say(channel: data.channel, text: rss.items.first.title)
-        client.say(channel: data.channel, text: rss.items.third.link)
+        americas_obj = SlackInteraction.new(url)
+        americas_obj.interact(client, data.channel)
       end
 
       command 'sports' do |client, data, _match|
         url = 'http://rss.cnn.com/rss/edition_sport.rss'
 
-        rss = RSS::Parser.parse(open(url).read, false)
-        client.say(channel: data.channel, text: rss.items.first.link)
-        client.say(channel: data.channel, text: rss.items.second.link)
-        client.say(channel: data.channel, text: rss.items.third.link)
+        sports_obj = SlackInteraction.new(url)
+        sports_obj.interact(client, data.channel)
       end
 
       command 'tech' do |client, data, _match|
         url = 'http://rss.cnn.com/rss/edition_technology.rss'
 
-        rss = RSS::Parser.parse(open(url).read, false)
-        client.say(channel: data.channel, text: rss.items.first.link)
-        client.say(channel: data.channel, text: rss.items.second.link)
-        client.say(channel: data.channel, text: rss.items.third.link)
+        tech_obj = SlackInteraction.new(url)
+        tech_obj.interact(client, data.channel)
       end
 
       command 'science' do |client, data, _match|
         url = 'http://rss.cnn.com/rss/edition_space.rss'
-
-        rss = RSS::Parser.parse(open(url).read, false)
-        client.say(channel: data.channel, text: rss.items.first.link)
-        client.say(channel: data.channel, text: rss.items.second.link)
-        client.say(channel: data.channel, text: rss.items.third.link)
+        
+        science_obj = SlackInteraction.new(url)
+        science_obj.interact(client, data.channel)
       end
     end
+  end
+end
+
+class SlackInteraction
+  attr_reader :url
+
+  def initialize(url)
+    @url = url
+  end
+  
+  def interact(client, to_channel)
+    speaker(client, to_channel, url_parser)
+  end
+
+  private
+  def url_parser
+    RSS::Parser.parse(open(@url).read, false)
+  end
+
+  def speaker(client, to_channel, info)
+    client.say(channel: to_channel, text: info.items.first.link)
+    client.say(channel: to_channel, text: info.items.second.link)
+    client.say(channel: to_channel, text: info.items.third.link)
   end
 end
 
