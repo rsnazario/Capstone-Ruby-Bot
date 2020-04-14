@@ -31,7 +31,7 @@ Start creating your repo and on the terminal type <code>$bundle init</code>. Thi
 Add the gems as the following screenshot:
 
 
-Now, to Link your file to the API with Slack, go to [slack.com/services/new/bot](https://slack.com/services/new/bot) in <strong>your workspace</strong> and create a bot application to get a <strong>SLACK_API_TOKEN</strong>.
+Now, to Link your file to the API with Slack, go to [slack.com/services/new/bot](https://slack.com/services/new/bot) in <strong>your workspace (You must be on a workspace so the link will work)</strong> and create a bot application to get a <strong>SLACK_API_TOKEN</strong>.
 
 Choose from the two options to connect your machine to Slack:
 
@@ -39,11 +39,11 @@ Choose from the two options to connect your machine to Slack:
   - Add <code>SLACK_API_TOKEN = @your_token_here </code>
   - Add <code>gem 'dotenv' to your Gemfile
   - Code the config.ru file as in this repo
-
+>
 <strong>Option 2 - export</strong>
   - Type <code>$export SLACK_API_TOKEN=@your_token_here</code> on your terminal
   - Add <code>token=ENV['SLACK_API_TOKEN']</code> as in the video of the last link (check after 13')
-
+>
 If you choose to apply option 1, add the same Gems on the Gemfile of this Repo
   - celluloid-io
   - dotenv
